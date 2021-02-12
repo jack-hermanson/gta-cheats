@@ -1,15 +1,15 @@
-import React from "react";
 import {
   Row,
   Col,
-  Card,
-  CardBody,
-  CardHeader,
   Container,
-  CardText,
-  CardTitle,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Button,
 } from "reactstrap";
 import { StandardCard } from "./components/shared/Card/StandardCard";
+import { TextInput } from "./components/text-test/TextInput";
 
 function App() {
   return (
@@ -23,9 +23,7 @@ function App() {
             />
           </Col>
           <Col xs={12} lg={6}>
-            <StandardCard title="Text Entry">
-              <p>Test</p>
-            </StandardCard>
+            <TextInput />
           </Col>
         </Row>
       </Container>
