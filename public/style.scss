@@ -1,7 +1,14 @@
-.test {
-  border: 1px solid white;
+@import "../node_modules/bootswatch/dist/darkly/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootswatch/dist/darkly/bootswatch";
+
+body {
+  padding-top: 3em;
 }
 
-@import "../node_modules/bootswatch/dist/cyborg/variables";
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/bootswatch/dist/cyborg/bootswatch";
+.card-title {
+  margin-bottom: 0;
+  h4 {
+    margin-bottom: 0;
+  }
+}
