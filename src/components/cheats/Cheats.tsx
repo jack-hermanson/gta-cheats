@@ -1,5 +1,4 @@
-import { stringify } from "querystring";
-import { ChangeEvent, Component, Fragment } from "react";
+import { ChangeEvent, Component, Fragment, MouseEvent } from "react";
 import { SearchCard } from "../search/SearchCard";
 import { StandardCard } from "../shared/Card/StandardCard";
 
@@ -31,12 +30,17 @@ export class Cheats extends Component<Props, State> {
     this.setState({ searchText: event.target.value });
   }
 
+  handleClearButtonClick(event?: MouseEvent<HTMLButtonElement>) {
+    this.setState({ searchText: "" });
+  }
+
   render() {
     return (
       <Fragment>
         <SearchCard
           label="Search Cheats"
           onSearchTextChange={(event) => this.handleSearchTextChange(event)}
+          onClearButtonClick={(event) => this.handleClearButtonClick(event)}
         />
         <StandardCard className="mt-4" title="Results">
           <p>{this.state.searchText}</p>

@@ -1,10 +1,11 @@
-import { Component, ChangeEvent } from "react";
+import { Component, ChangeEvent, MouseEvent } from "react";
 import { Form, FormGroup, Label, Input, InputGroup } from "reactstrap";
 import { StandardCard } from "../shared/Card/StandardCard";
 
 interface Props {
   label: string;
   onSearchTextChange: (event: ChangeEvent<HTMLInputElement>) => any;
+  onClearButtonClick: (event: MouseEvent<HTMLButtonElement>) => any;
 }
 
 interface State {
@@ -31,6 +32,13 @@ export class SearchCard extends Component<Props, State> {
     this.props.onSearchTextChange(e);
   };
 
+  clear = (e: MouseEvent<HTMLButtonElement>) => {
+    this.setState({
+      searchText: "",
+    });
+    this.props.onClearButtonClick(e);
+  };
+
   render() {
     return (
       <StandardCard title="Text Entry">
@@ -49,7 +57,7 @@ export class SearchCard extends Component<Props, State> {
                 <button
                   className="bg-dark btn text-white border-white btn-outline-secondary"
                   type="button"
-                  onClick={() => console.log("clear")}
+                  onClick={(e) => this.clear(e)}
                 >
                   &times;
                 </button>
