@@ -1,5 +1,5 @@
 import { ChangeEvent, Component, Fragment, MouseEvent } from "react";
-import { SearchCard } from "../search/SearchCard";
+import { SearchCard } from "../shared/Search/SearchCard";
 import { StandardCard } from "../shared/Card/StandardCard";
 import cheatData from "../../data/cheats.json";
 
@@ -38,6 +38,7 @@ export class Cheats extends Component<Props, State> {
     return (
       <Fragment>
         <SearchCard
+          cardTitle="Cheats"
           label="Search Cheats"
           onSearchTextChange={(event) => this.handleSearchTextChange(event)}
           onClearButtonClick={(event) => this.handleClearButtonClick(event)}

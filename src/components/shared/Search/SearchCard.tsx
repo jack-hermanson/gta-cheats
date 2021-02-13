@@ -1,9 +1,10 @@
 import { Component, ChangeEvent, MouseEvent } from "react";
 import { Form, FormGroup, Label, Input, InputGroup } from "reactstrap";
-import { StandardCard } from "../shared/Card/StandardCard";
+import { StandardCard } from "../Card/StandardCard";
 
 interface Props {
   label: string;
+  cardTitle: string;
   onSearchTextChange: (event: ChangeEvent<HTMLInputElement>) => any;
   onClearButtonClick: (event: MouseEvent<HTMLButtonElement>) => any;
 }
@@ -42,12 +43,13 @@ export class SearchCard extends Component<Props, State> {
 
   render() {
     return (
-      <StandardCard title="Text Entry">
+      <StandardCard title={this.props.cardTitle}>
         <Form onSubmit={(e) => e.preventDefault()}>
           <FormGroup className="mb-2">
             <Label>{this.props.label}</Label>
             <InputGroup>
               <Input
+                autoFocus
                 id="search-text"
                 placeholder="Enter something..."
                 type="text"
