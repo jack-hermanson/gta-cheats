@@ -1,12 +1,12 @@
 import { ChangeEvent, Component, Fragment, MouseEvent } from "react";
 import { SearchCard } from "../search/SearchCard";
 import { StandardCard } from "../shared/Card/StandardCard";
+import cheatData from "../../data/cheats.json";
 
 interface Props {}
 
 interface State {
-  cheats: Array<string>;
-  cheatsCounter: number;
+  cheats: Array<{ name: string; code: string }>;
   searchText: string;
 }
 
@@ -15,8 +15,7 @@ export class Cheats extends Component<Props, State> {
     super(props);
 
     this.state = {
-      cheats: ["test"],
-      cheatsCounter: 0,
+      cheats: cheatData,
       searchText: "",
     };
 
@@ -35,6 +34,7 @@ export class Cheats extends Component<Props, State> {
   }
 
   render() {
+    console.log(this.state.cheats);
     return (
       <Fragment>
         <SearchCard
