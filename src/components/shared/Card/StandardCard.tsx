@@ -23,7 +23,7 @@ export class StandardCard extends Component<Props> {
       <Card>
         <CardHeader title={this.props.title}></CardHeader>
         <CardBody>
-          {this.props.paragraph != undefined && (
+          {this.props.paragraph !== undefined && (
             <CardTextBody paragraph={this.props.paragraph} />
           )}
           {this.props.children}

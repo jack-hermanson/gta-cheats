@@ -1,14 +1,4 @@
-import {
-  Row,
-  Col,
-  Container,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Button,
-} from "reactstrap";
-import { StandardCard } from "./components/shared/Card/StandardCard";
+import { Row, Col, Container } from "reactstrap";
 import { SearchCard } from "./components/search/SearchCard";
 import { ChangeEvent } from "react";
 
@@ -17,16 +7,10 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <Col xs={12} lg={6}>
-            <StandardCard
-              title="Clean Code"
-              paragraph="A Handbook of Agile Software Craftsmanship"
-            />
-          </Col>
-          <Col xs={12} lg={6}>
+          <Col xs={12}>
             <SearchCard
               onSearchTextChange={(event: ChangeEvent<HTMLInputElement>) => {
-                console.log(event.target.value);
+                console.log(event);
               }}
               label="Search for Cheat"
             />
