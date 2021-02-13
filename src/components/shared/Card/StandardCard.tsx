@@ -8,6 +8,7 @@ interface Props {
   title: string;
   paragraph?: string;
   children?: JSX.Element;
+  className?: string;
 }
 
 export class StandardCard extends Component<Props> {
@@ -20,7 +21,7 @@ export class StandardCard extends Component<Props> {
 
   render() {
     return (
-      <Card>
+      <Card className={this.props.className}>
         <CardHeader title={this.props.title}></CardHeader>
         <CardBody>
           {this.props.paragraph !== undefined && (

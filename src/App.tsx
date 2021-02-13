@@ -1,6 +1,5 @@
 import { Row, Col, Container } from "reactstrap";
-import { SearchCard } from "./components/search/SearchCard";
-import { ChangeEvent } from "react";
+import { Cheats } from "./components/cheats/Cheats";
 
 function App() {
   return (
@@ -8,12 +7,7 @@ function App() {
       <Container>
         <Row>
           <Col xs={12}>
-            <SearchCard
-              onSearchTextChange={(event: ChangeEvent<HTMLInputElement>) => {
-                console.log(event);
-              }}
-              label="Search for Cheat"
-            />
+            <Cheats />
           </Col>
         </Row>
       </Container>
