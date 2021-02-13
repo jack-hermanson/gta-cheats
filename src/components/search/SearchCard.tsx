@@ -37,6 +37,7 @@ export class SearchCard extends Component<Props, State> {
       searchText: "",
     });
     this.props.onClearButtonClick(e);
+    document.getElementById("search-text")?.focus();
   };
 
   render() {
@@ -47,6 +48,7 @@ export class SearchCard extends Component<Props, State> {
             <Label>{this.props.label}</Label>
             <InputGroup>
               <Input
+                id="search-text"
                 placeholder="Enter something..."
                 type="text"
                 className="border-white"
