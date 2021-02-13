@@ -18,7 +18,7 @@ export class SearchCard extends Component<Props, State> {
     this.props = props;
 
     this.state = {
-      searchText: "test",
+      searchText: "",
     };
   }
 
@@ -47,11 +47,11 @@ export class SearchCard extends Component<Props, State> {
               />
               <div className="input-group-append">
                 <button
-                  className="btn text-light border-white btn-outline-secondary"
+                  className="bg-dark btn text-white border-white btn-outline-secondary"
                   type="button"
                   onClick={() => console.log("clear")}
                 >
-                  Clear
+                  &times;
                 </button>
               </div>
             </InputGroup>

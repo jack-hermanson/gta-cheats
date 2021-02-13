@@ -11054,4 +11054,8 @@ body {
 .card-title h4 {
   margin-bottom: 0;
 }
+
+label {
+  font-weight: bolder;
+}
 /*# sourceMappingURL=style.css.map */

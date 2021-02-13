@@ -1,3 +1,4 @@
+import { stringify } from "querystring";
 import { ChangeEvent, Component, Fragment } from "react";
 import { SearchCard } from "../search/SearchCard";
 import { StandardCard } from "../shared/Card/StandardCard";
@@ -6,6 +7,8 @@ interface Props {}
 
 interface State {
   cheats: Array<string>;
+  cheatsCounter: number;
+  searchText: string;
 }
 
 export class Cheats extends Component<Props, State> {
@@ -14,6 +17,8 @@ export class Cheats extends Component<Props, State> {
 
     this.state = {
       cheats: ["test"],
+      cheatsCounter: 0,
+      searchText: "",
     };
 
     this.props = props;
@@ -23,8 +28,7 @@ export class Cheats extends Component<Props, State> {
   props: Props;
 
   handleSearchTextChange(event: ChangeEvent<HTMLInputElement>) {
-    this.setState({ cheats: [...this.state.cheats, event.target.value] });
-    console.log(this.state.cheats);
+    this.setState({ searchText: event.target.value });
   }
 
   render() {
@@ -35,7 +39,7 @@ export class Cheats extends Component<Props, State> {
           onSearchTextChange={(event) => this.handleSearchTextChange(event)}
         />
         <StandardCard className="mt-4" title="Results">
-          <p>{this.state.cheats}</p>
+          <p>{this.state.searchText}</p>
         </StandardCard>
       </Fragment>
     );
