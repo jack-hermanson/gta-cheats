@@ -44,7 +44,11 @@ export class Cheats extends Component<Props, State> {
           onClearButtonClick={(event) => this.handleClearButtonClick(event)}
         />
         <StandardCard className="mt-4" title="Results">
-          <p>{this.state.searchText}</p>
+          <div>
+            {this.state.cheats.map((cheat) => (
+              <p key={cheat.name}>df</p>
+            ))}
+          </div>
         </StandardCard>
       </Fragment>
     );
