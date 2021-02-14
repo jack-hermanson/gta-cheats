@@ -17,7 +17,7 @@ export class Cheats extends Component<Props, State> {
     super(props);
 
     this.state = {
-      cheats: cheatData,
+      cheats: cheatData.sort(this.sortCheatsList),
       searchText: "",
     };
 
@@ -27,13 +27,36 @@ export class Cheats extends Component<Props, State> {
   state: State;
   props: Props;
 
+  resetCheatsList() {
+    this.setState({ cheats: cheatData.sort(this.sortCheatsList) });
+  }
+
   handleSearchTextChange(event: ChangeEvent<HTMLInputElement>) {
     this.setState({ searchText: event.target.value });
+    this.filterCheatsBySearch(event.target.value);
   }
 
   handleClearButtonClick(event?: MouseEvent<HTMLButtonElement>) {
     this.setState({ searchText: "" });
+    this.resetCheatsList();
   }
+
+  filterCheatsBySearch(query: string) {
+    this.setState({
+      cheats: cheatData
+        .filter((cheat) => {
+          if (cheat.name.toLowerCase().includes(query)) return cheat;
+        })
+        .sort(this.sortCheatsList),
+    });
+  }
+
+  sortCheatsList = (
+    cheat1: { name: string; code: string },
+    cheat2: { name: string; code: string }
+  ) => {
+    return cheat1.name > cheat2.name ? 1 : -1;
+  };
 
   render() {
     console.log(this.state.cheats);
@@ -50,6 +73,13 @@ export class Cheats extends Component<Props, State> {
             {this.state.cheats.map((cheat) => (
               <Cheat cheat={cheat} key={cheat.name} />
             ))}
+            {this.state.cheats.length > 0 ? (
+              ""
+            ) : (
+              <ListGroupItem className="px-0">
+                No results found for "{this.state.searchText}".
+              </ListGroupItem>
+            )}
           </ListGroup>
         </StandardCard>
       </Fragment>
