@@ -1,6 +1,7 @@
 import { Component, ChangeEvent, MouseEvent } from "react";
 import { Form, FormGroup, Label, Input, InputGroup } from "reactstrap";
 import { StandardCard } from "../Card/StandardCard";
+import { FaTimes } from "react-icons/fa";
 
 interface Props {
   label: string;
@@ -53,7 +54,7 @@ export class SearchCard extends Component<Props, State> {
                 id="search-text"
                 placeholder="Enter something..."
                 type="text"
-                className="border-white"
+                className="border-white form-control-lg"
                 value={this.state.searchText}
                 onChange={(e) => this.change(e)}
               />
@@ -63,7 +64,7 @@ export class SearchCard extends Component<Props, State> {
                   type="button"
                   onClick={(e) => this.clear(e)}
                 >
-                  &times;
+                  <FaTimes />
                 </button>
               </div>
             </InputGroup>

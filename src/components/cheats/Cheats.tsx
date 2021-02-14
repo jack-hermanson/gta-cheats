@@ -45,7 +45,8 @@ export class Cheats extends Component<Props, State> {
     this.setState({
       cheats: cheatData
         .filter((cheat) => {
-          if (cheat.name.toLowerCase().includes(query)) return cheat;
+          if (cheat.name.toLowerCase().includes(query.toLowerCase()))
+            return cheat;
         })
         .sort(this.sortCheatsList),
     });
@@ -68,7 +69,7 @@ export class Cheats extends Component<Props, State> {
           onSearchTextChange={(event) => this.handleSearchTextChange(event)}
           onClearButtonClick={(event) => this.handleClearButtonClick(event)}
         />
-        <StandardCard className="mt-4" title="Results">
+        <StandardCard className="my-4" title="Results">
           <ListGroup className="list-group-flush">
             {this.state.cheats.map((cheat) => (
               <Cheat cheat={cheat} key={cheat.name} />
