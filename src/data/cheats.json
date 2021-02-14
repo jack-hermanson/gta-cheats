@@ -8,7 +8,15 @@
     "code": "RIGHT LEFT RB RB RB LEFT Y Y A B LB LB"
   },
   {
-    "name": "Caddy",
+    "name": "Spawn Caddy",
     "code": "B LB LEFT RB LT A RB LB B A"
+  },
+  {
+    "name": "Spawn BMX",
+    "code": "LEFT LEFT RIGHT RIGHT LEFT RIGHT X B Y RB RT"
+  },
+  {
+    "name": "Spawn Buzzard",
+    "code": "B B LB B B B LB RT RB Y B Y"
   }
 ]
