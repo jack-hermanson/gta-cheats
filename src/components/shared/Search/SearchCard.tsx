@@ -1,4 +1,4 @@
-import { Component, ChangeEvent, MouseEvent } from "react";
+import { Component, ChangeEvent, MouseEvent, KeyboardEvent } from "react";
 import { Form, FormGroup, Label, Input, InputGroup } from "reactstrap";
 import { StandardCard } from "../Card/StandardCard";
 import { FaTimes } from "react-icons/fa";
@@ -7,7 +7,7 @@ interface Props {
   label: string;
   cardTitle: string;
   onSearchTextChange: (event: ChangeEvent<HTMLInputElement>) => any;
-  onClearButtonClick: (event: MouseEvent<HTMLButtonElement>) => any;
+  onClearButtonClick: (event?: MouseEvent<HTMLButtonElement>) => any;
 }
 
 interface State {
@@ -34,12 +34,18 @@ export class SearchCard extends Component<Props, State> {
     this.props.onSearchTextChange(e);
   };
 
-  clear = (e: MouseEvent<HTMLButtonElement>) => {
+  clear = (e?: MouseEvent<HTMLButtonElement>) => {
     this.setState({
       searchText: "",
     });
     this.props.onClearButtonClick(e);
     document.getElementById("search-text")?.focus();
+  };
+
+  enter = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      this.clear();
+    }
   };
 
   render() {
@@ -57,6 +63,7 @@ export class SearchCard extends Component<Props, State> {
                 className="border-white form-control-lg"
                 value={this.state.searchText}
                 onChange={(e) => this.change(e)}
+                onKeyPress={(e) => this.enter(e)}
               />
               <div className="input-group-append">
                 <button
