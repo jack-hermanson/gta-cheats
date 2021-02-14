@@ -11045,6 +11045,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   padding-top: 3em;
+  overflow-y: scroll;
 }
 
 .card-title {
