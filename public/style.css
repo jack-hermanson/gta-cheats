@@ -11058,4 +11058,12 @@ body {
 label {
   font-weight: bolder;
 }
+
+.list-group-item:first-of-type {
+  padding-top: 0;
+}
+
+.list-group-item:last-of-type {
+  padding-bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

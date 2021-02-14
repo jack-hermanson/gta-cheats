@@ -1,9 +1,11 @@
 import { Component, ChangeEvent, MouseEvent } from "react";
 import { Form, FormGroup, Label, Input, InputGroup } from "reactstrap";
-import { StandardCard } from "../shared/Card/StandardCard";
+import { StandardCard } from "../Card/StandardCard";
+import { FaTimes } from "react-icons/fa";
 
 interface Props {
   label: string;
+  cardTitle: string;
   onSearchTextChange: (event: ChangeEvent<HTMLInputElement>) => any;
   onClearButtonClick: (event: MouseEvent<HTMLButtonElement>) => any;
 }
@@ -37,19 +39,22 @@ export class SearchCard extends Component<Props, State> {
       searchText: "",
     });
     this.props.onClearButtonClick(e);
+    document.getElementById("search-text")?.focus();
   };
 
   render() {
     return (
-      <StandardCard title="Text Entry">
+      <StandardCard title={this.props.cardTitle}>
         <Form onSubmit={(e) => e.preventDefault()}>
           <FormGroup className="mb-2">
             <Label>{this.props.label}</Label>
             <InputGroup>
               <Input
+                autoFocus
+                id="search-text"
                 placeholder="Enter something..."
                 type="text"
-                className="border-white"
+                className="border-white form-control-lg"
                 value={this.state.searchText}
                 onChange={(e) => this.change(e)}
               />
@@ -59,7 +64,7 @@ export class SearchCard extends Component<Props, State> {
                   type="button"
                   onClick={(e) => this.clear(e)}
                 >
-                  &times;
+                  <FaTimes />
                 </button>
               </div>
             </InputGroup>

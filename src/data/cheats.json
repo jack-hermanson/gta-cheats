@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Spawn Limo",
+    "code": "RT RIGHT LT LEFT LEFT RB LB B RIGHT"
+  },
+  {
+    "name": "Spawn Duster",
+    "code": "RIGHT LEFT RB RB RB LEFT Y Y A B LB LB"
+  },
+  {
+    "name": "Spawn Caddy",
+    "code": "B LB LEFT RB LT A RB LB B A"
+  },
+  {
+    "name": "Spawn BMX",
+    "code": "LEFT LEFT RIGHT RIGHT LEFT RIGHT X B Y RB RT"
+  },
+  {
+    "name": "Spawn Buzzard",
+    "code": "B B LB B B B LB RT RB Y B Y"
+  },
+  {
+    "name": "Spawn Pfister Comet",
+    "code": "RB B RT"
+  },
+  {
+    "name": "Spawn Rapid GT",
+    "code": "RT LB B RIGHT LB RB RIGHT LEFT B RT RB"
+  },
+  {
+    "name": "Spawn PCJ-600",
+    "code": "RB RIGHT LEFT RIGHT RT LEFT RIGHT X RIGHT LT LB LB"
+  },
+  {
+    "name": "Spawn Sanchez",
+    "code": "B A LB B B LB B RB RT LT LB LB"
+  },
+  {
+    "name": "Spawn Trashmaster",
+    "code": "B RB B RB LEFT LEFT RB LB B RIGHT"
+  },
+  {
+    "name": "Spawn Stunt Plane",
+    "code": "B RIGHT LB LT LEFT RB LB LB LEFT LEFT A Y"
+  },
+  {
+    "name": "Change Weather",
+    "code": "RT A LB LB LT LT LT X"
+  },
+  {
+    "name": "Slippery Cars",
+    "code": "Y RB RB LEFT RB LB RT LB"
+  },
+  {
+    "name": "Change Gravity",
+    "code": "LEFT LEFT LB RB LB RIGHT LEFT LB LEFT"
+  },
+  {
+    "name": "Slow Gameplay",
+    "code": "Y LEFT RIGHT RIGHT X RT RB"
+  },
+  {
+    "name": "Fire Bullets",
+    "code": "LB RB X RB LEFT RT RB LEFT X RIGHT LB LB"
+  },
+  {
+    "name": "Fists of Fury",
+    "code": "RIGHT LEFT A Y RB B B B LT"
+  },
+  {
+    "name": "Explosive Bullets",
+    "code": "RIGHT X A LEFT RB RT LEFT RIGHT RIGHT RB LB LB"
+  },
+  {
+    "name": "Health and Armor Regeneration",
+    "code": "B LB Y RT A X B RIGHT X LB LB LB"
+  },
+  {
+    "name": "Invincibility",
+    "code": "RIGHT A RIGHT LEFT RIGHT RB RIGHT LEFT A Y"
+  },
+  {
+    "name": "Lower Wanted Level",
+    "code": "RB RB B RT RIGHT LEFT RIGHT LEFT RIGHT LEFT"
+  },
+  {
+    "name": "Increase Wanted Level",
+    "code": "RB RB B RT LEFT RIGHT LEFT RIGHT LEFT RIGHT"
+  },
+  {
+    "name": "Slow Motion Aim",
+    "code": "X LT RB Y LEFT X LT RIGHT A"
+  },
+  {
+    "name": "Fast Run",
+    "code": "Y LEFT RIGHT RIGHT LT LB X"
+  },
+  {
+    "name": "Fast Swim",
+    "code": "LEFT LEFT LB RIGHT RIGHT RT LEFT LT RIGHT"
+  },
+  {
+    "name": "Super Jump",
+    "code": "LEFT LEFT Y Y RIGHT RIGHT LEFT RIGHT X RB RT"
+  },
+  {
+    "name": "Drunk Mode",
+    "code": "Y RIGHT RIGHT LEFT RIGHT X B LEFT"
+  },
+  {
+    "name": "High Jump",
+    "code": "LB LT RB RT LEFT RIGHT LEFT RIGHT LB LT RB RT LEFT RIGHT LEFT RIGHT"
+  },
+  {
+    "name": "Ability Charge",
+    "code": "A A X RB LB A RIGHT LEFT A"
+  },
+  {
+    "name": "Guns",
+    "code": "Y RT LEFT LB A RIGHT Y DOWN X LB LB LB"
+  },
+  {
+    "name": "Parachute",
+    "code": "LEFT RIGHT LB LT RB RT RT LEFT LEFT RIGHT LB"
+  }
+]
