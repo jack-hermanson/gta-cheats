@@ -19,8 +19,11 @@ export class Cheat extends Component<Props> {
     return (
       <ListGroupItem className="px-0">
         <ListGroupItemHeading>{this.props.cheat.name}</ListGroupItemHeading>
-        <ListGroupItemText className="mb-0">
-          {this.props.cheat.name}
+        <ListGroupItemText
+          style={{ fontFamily: "Menlo, monospace", fontSize: 16 }}
+          className="mb-0"
+        >
+          {this.props.cheat.code}
         </ListGroupItemText>
       </ListGroupItem>
     );

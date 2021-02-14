@@ -1,10 +1,14 @@
 [
   {
-    "name": "test cheat name",
-    "code": "abc789"
+    "name": "Spawn Limo",
+    "code": "RT RIGHT LT LEFT LEFT RB LB B RIGHT"
   },
   {
-    "name": "another",
-    "code": "1231"
+    "name": "Spawn Duster",
+    "code": "RIGHT LEFT RB RB RB LEFT Y Y A B LB LB"
+  },
+  {
+    "name": "Caddy",
+    "code": "B LB LEFT RB LT A RB LB B A"
   }
 ]
