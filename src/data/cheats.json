@@ -2,5 +2,9 @@
   {
     "name": "test cheat name",
     "code": "abc789"
+  },
+  {
+    "name": "another",
+    "code": "1231"
   }
 ]

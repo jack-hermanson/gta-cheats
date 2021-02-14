@@ -16,3 +16,12 @@ body {
 label {
   font-weight: bolder;
 }
+
+.list-group-item {
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

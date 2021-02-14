@@ -1,7 +1,9 @@
 import { ChangeEvent, Component, Fragment, MouseEvent } from "react";
 import { SearchCard } from "../shared/Search/SearchCard";
 import { StandardCard } from "../shared/Card/StandardCard";
+import { Cheat } from "./Cheat";
 import cheatData from "../../data/cheats.json";
+import { ListGroup, ListGroupItem } from "reactstrap";
 
 interface Props {}
 
@@ -44,11 +46,11 @@ export class Cheats extends Component<Props, State> {
           onClearButtonClick={(event) => this.handleClearButtonClick(event)}
         />
         <StandardCard className="mt-4" title="Results">
-          <div>
+          <ListGroup className="list-group-flush">
             {this.state.cheats.map((cheat) => (
-              <p key={cheat.name}>df</p>
+              <Cheat cheat={cheat} key={cheat.name} />
             ))}
-          </div>
+          </ListGroup>
         </StandardCard>
       </Fragment>
     );
